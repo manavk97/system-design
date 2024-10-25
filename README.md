@@ -3,16 +3,20 @@
 This repository aims to provide high-quality materials and resources related to system design. It serves as a comprehensive collection of information, examples, and best practices to help developers, architects, and engineers learn and improve their system design skills.
 
 ## Table of Contents
-
 1. [Distributed System Design Patterns](#1-distributed-system-design-patterns)
-    1.1. [Data Management Patterns](#11-data-management-patterns)
-    1.2. [Design and Implementation Patterns](#12-design-and-implementation-patterns)
-    1.3. [Messaging Patterns](#13-messaging-patterns)
+    1. [Data Management Patterns](#11-data-management-patterns)
+    2. [Design and Implementation Patterns](#12-design-and-implementation-patterns)
+    3. [Messaging Patterns](#13-messaging-patterns)
 2. [Design Patterns (OOP)](#2-design-patterns-oop)
-    2.1. [Creational Patterns](#21-creational-patterns)
-    2.2. [Structural Patterns](#22-structural-patterns)
-    2.3. [Behavioral Patterns](#23-behavioral-patterns)
+    1. [Creational Patterns](#21-creational-patterns)
+    2. [Structural Patterns](#22-structural-patterns)
+    3. [Behavioral Patterns](#23-behavioral-patterns)
 3. [Real World System Design Case Studies](#3-real-world-system-design-case-studies)
+4. [System Concepts](#4-system-concepts)
+    1. [Protocols](#41-protocols)
+    2. [Deployment Patterns](#42-deployment-patterns)
+    3. [Load Balancing Patterns](#43-load-balancing-patterns)
+5. [System Components](#5-system-components)
 
 ## System Design Concepts
 
@@ -126,3 +130,13 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 | Shard Manager | [Engineering Blog Post](https://engineering.fb.com/2020/08/24/production-engineering/scaling-services-with-shard-manager/)<br>[Research Paper](https://research.facebook.com/publications/shard-manager-a-generic-shard-management-framework-for-geo-distributed-applications/)<br>[YouTube Video](https://www.youtube.com/watch?v=OMI52r-thFA&t=43s) |
 | AWS S3 | [YouTube Video 1](https://www.youtube.com/watch?v=v3HfUNQ0JOE)<br>[YouTube Video 2](https://www.youtube.com/watch?v=qJoATSh5CZY) |
 | AWS Lambda | [YouTube Video](https://www.youtube.com/watch?v=0_jfH6qijVY) |
+
+### 4. System Concepts
+
+#### 4.1. [Protocols](#41-protocols)
+
+#### 4.2. [Deployment Patterns](#42-deployment-patterns)
+
+#### 4.3. [Load Balancing Patterns](#43-load-balancing-patterns)
+
+### 5. System Components
