@@ -140,3 +140,27 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 #### 4.3. [Load Balancing Patterns](#43-load-balancing-patterns)
 
 ### 5. System Components
+
+---
+
+## References
+
+This repository compiles information from various authoritative sources in the field of system design. Key references include:
+
+1. Microsoft Azure Architecture Center. (n.d.). Cloud Design Patterns. https://learn.microsoft.com/en-us/azure/architecture/patterns/
+
+2. Shvets, A. (n.d.). Design Patterns. Refactoring.Guru. https://refactoring.guru/design-patterns
+
+3. Facebook Engineering. (n.d.). Engineering Blog. https://engineering.fb.com/
+
+4. Google Research. (n.d.). Publications. https://research.google/pubs/
+
+5. Amazon Web Services. (n.d.). AWS Architecture Blog. https://aws.amazon.com/blogs/architecture/
+
+6. Martin, R. C. (2000). Design Principles and Design Patterns. ObjectMentor.
+
+7. Kleppmann, M. (2017). Designing Data-Intensive Applications. O'Reilly Media.
+
+8. Fowler, M. (2002). Patterns of Enterprise Application Architecture. Addison-Wesley.
+
+This list is not exhaustive, and we acknowledge all the researchers, authors, and organizations that have contributed to the field of system design. For specific attributions or additional references, please refer to the individual sections or open an issue.
