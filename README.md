@@ -16,7 +16,21 @@ This repository aims to provide high-quality materials and resources related to 
     1. [Protocols](#41-protocols)
     2. [Deployment Patterns](#42-deployment-patterns)
     3. [Load Balancing Patterns](#43-load-balancing-patterns)
+    4. [API Strategy](#44-api-strategy)
+    5. [Real Used System Algorithm](#45-real-used-system-algorithm)
+    6. [Rate Limit strategy](#46-rate-limit-strategy)
+    7. [Caching Strategy](#47-caching-strategy)
+    8. [Deployment Strategy](#48-deployment-strategy)
+    9. [System Problems](#49-system-problems)
+    10. [Concurrency](#410-concurrency)
+
 5. [System Components](#5-system-components)
+    1. [Databases](#51-databases)
+    2. [Queues](#52-queues)
+    3. [Cache](#53-cache)
+    4. [Load Balancers](#54-load-balancers)
+    5. [File Systems](#55-file-systems)
+    6. [Data Processing](#56-data-processing)
 
 ## System Design Concepts
 
@@ -131,7 +145,7 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 | AWS S3 | [YouTube Video 1](https://www.youtube.com/watch?v=v3HfUNQ0JOE)<br>[YouTube Video 2](https://www.youtube.com/watch?v=qJoATSh5CZY) |
 | AWS Lambda | [YouTube Video](https://www.youtube.com/watch?v=0_jfH6qijVY) |
 
-### 4. System Concepts
+### 4. Various System Concepts
 
 #### 4.1. [Protocols](#41-protocols)
 
@@ -139,7 +153,78 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 
 #### 4.3. [Load Balancing Patterns](#43-load-balancing-patterns)
 
+#### 4.4. [API Strategy](#44-api-strategy)
+
+#### 4.5. [Real Used System Algorithm](#45-real-used-system-algorithm)
+
+#### 4.6. [Rate Limit strategy](#46-rate-limit-strategy)
+
+#### 4.7. [Caching Strategy](#47-caching-strategy)
+
+#### 4.8. [Deployment Strategy](#48-deployment-strategy)
+
+#### 4.9. [System Problems](#49-system-problems)
+
+#### 4.10. [Concurrency](#410-concurrency)
+
 ### 5. System Components
+
+#### 5.1. [Databases](#51-databases)
+
+| Database | Description |
+|----------|-------------|
+| MongoDB | |
+| MySQL | |
+| PostgreSQL | |
+| DynamoDB | |
+| Cassandra | |
+
+#### 5.2. [Queues](#52-queues)
+
+| Queue | Description |
+|-------|-------------|
+| Kafka | |
+| RebbitMQ | |
+| SQS | |
+
+
+#### 5.3. [Cache](#53-cache)
+
+| Cache | Description |
+|-------|-------------|
+| Redis | |
+| MemCache | |
+| CDN | |
+| Open Connect | |
+
+#### 5.4. [Load Balancers](#54-load-balancers)
+
+| Load Balancer | Description |
+|---------------|-------------|
+| L4 | |
+| L7 | |
+
+
+### Coordination Services
+
+| Coordination Service | Description |
+|-----------------------|-------------|
+| ETCD | |
+| Apache zookeeper | |
+
+#### 5.5. [File Systems](#55-file-systems)
+
+| File System | Description |
+|-------------|-------------|
+| hdfs | |
+| s3 | |
+
+#### 5.6. [Data Processing](#56-data-processing)
+
+| Data Processing | Description |
+|-----------------|-------------|
+| Map Reduce | |
+| Hadoop | |
 
 ---
 
