@@ -7,10 +7,19 @@ This repository aims to provide high-quality materials and resources related to 
     1. [Data Management Patterns](#11-data-management-patterns)
     2. [Design and Implementation Patterns](#12-design-and-implementation-patterns)
     3. [Messaging Patterns](#13-messaging-patterns)
-2. [Design Patterns (OOP)](#2-design-patterns-oop)
+2. [Design Patterns & Principles](#2-design-patterns-principles)
     1. [Creational Patterns](#21-creational-patterns)
     2. [Structural Patterns](#22-structural-patterns)
     3. [Behavioral Patterns](#23-behavioral-patterns)
+    4. [SOLID Principles](#24-solid-principles)
+    5. [DRY (Don't Repeat Yourself) Principle](#25-dry-don-t-repeat-yourself-principle)
+    6. [KISS (Keep It Simple, Stupid) Principle](#26-kiss-keep-it-simple-stupid-principle)
+    7. [YAGNI (You Aren't Gonna Need It) Principle](#27-yagni-you-aren-t-gonna-need-it-principle)
+    8. [Convention over Configuration (CoC) Principle](#28-convention-over-configuration-coc-principle)
+    9. [Law of Demeter (LoD) Principle](#29-law-of-demeter-lod-principle)
+    10. [Composition over Inheritance Principle](#210-composition-over-inheritance-principle)
+    11. [TDA (Tell, Don’t Ask) Principle](#211-tda-tell-don-t-ask-principle)
+
 3. [Real World System Design Case Studies](#3-real-world-system-design-case-studies)
 4. [System Concepts](#4-system-concepts)
     1. [Protocols](#41-protocols)
@@ -125,6 +134,152 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 | [Strategy](https://refactoring.guru/design-patterns/strategy) | Lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable |
 | [Template Method](https://refactoring.guru/design-patterns/template-method) | Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure |
 | [Visitor](https://refactoring.guru/design-patterns/visitor) | Lets you separate algorithms from the objects on which they operate |
+
+#### 2.4 SOLID Principles
+
+The SOLID principles are key concepts in software development. They promote the design of robust and scalable code. In this chapter, we will examine in detail the five SOLID principles and their respective advantages.
+
+- Single Responsibility Principle (SRP)
+
+The Single Responsibility Principle (SRP) states that a class should have only one well-defined responsibility. In other words, a class should be responsible for only one task or one aspect of the system. This facilitates code understanding, maintenance, and reusability. For example, instead of having a class that handles both user authentication and notification sending, it is better to separate these responsibilities into two distinct classes.
+
+The benefits of applying SRP are numerous. First, it makes the code more modular, making it easier to make modifications and additions later on. Additionally, troubleshooting and issue resolution are simplified as each class focuses on a single responsibility. Finally, code reusability is promoted, as specialized classes can be used in different parts of the system.
+
+Let’s take the example of a library management application. By applying SRP, we can have a separate class for book management, another for users, and another for transactions. Each class will have its own responsibility, making the code clearer and more maintainable.
+
+- Open/Closed Principle (OCP)
+
+The Open/Closed Principle (OCP) emphasizes designing code that is open for extension but closed for modification. In other words, when new features need to be added, it is better to extend the existing code rather than directly modifying it.
+
+The key advantage of applying OCP lies in its ability to make the code more flexible and extensible. By using mechanisms such as inheritance, polymorphism, and inversion of control, we can add new features without impacting the existing code. It also facilitates unit testing, as existing features are not altered when introducing new ones.
+
+For example, in a payment processing application, we can have a generic abstract class for payment methods, such as “PaymentMethod.” Each specific payment method (e.g., credit card, PayPal) can then be implemented by extending this abstract class while retaining the basic functionalities common to all payment methods.
+
+By following the OCP principle, the code remains stable and avoids regressions even when extended with new features.
+
+- Liskov Substitution Principle (LSP)
+
+The Liskov Substitution Principle (LSP) highlights the importance of adhering to contracts when inheriting classes. Specifically, if a class B is a subclass of class A, then it should be able to be used as a replacement for A without affecting the system’s overall consistency.
+
+The main advantage of applying LSP is the ability to substitute objects of subclasses for objects of base classes without altering the overall behavior of the system. This promotes modularity and code reusability, as new subclasses can be added without disrupting existing parts of the system.
+
+For example, consider a hierarchy of classes for geometric shapes. If we have a base class “Shape” with specific subclasses such as “Circle” and “Rectangle,” LSP requires that instances of “Circle” and “Rectangle” can be used wherever an instance of “Shape” is expected without altering the expected behavior.
+
+By respecting LSP, we ensure consistency in the system and avoid surprises or unexpected behaviors when using inheritance.
+
+- Interface Segregation Principle (ISP)
+
+The Interface Segregation Principle (ISP) advocates for defining specific interfaces for clients rather than having a monolithic interface. In other words, clients should not be forced to implement methods they don’t use.
+
+Applying ISP offers several benefits. Firstly, it makes interfaces clearer and more coherent as they only contain the necessary methods for a specific client. It also facilitates maintenance, as changes to an interface do not affect all clients but only those using the relevant methods.
+
+For example, in an e-commerce application, we can have a separate interface for online payment methods and another for offline payment methods. This way, classes handling online payments only implement the relevant methods for online payments, and vice versa.
+
+By respecting ISP, we create more concise interfaces tailored to the specific needs of clients, making our code more flexible and extensible.
+
+- Dependency Inversion Principle (DIP)
+
+The Dependency Inversion Principle (DIP) encourages the use of abstract dependencies rather than relying on concrete classes. In other words, high-level modules should not depend directly on low-level modules but on common abstractions.
+
+Applying DIP brings several advantages. The first is modularity, as dependencies are defined on interfaces or abstract classes, making it easier to replace concrete implementations. The second is facilitating unit testing, as dependencies can be easily mocked or injected during tests. Finally, it enables reduced coupling between different modules, making the code more flexible and reusable.
+
+For example, instead of a high-level class directly depending on a low-level class, we can introduce an abstract interface between the two. This way, the high-level class depends on the interface rather than the concrete class, allowing for easier substitutions.
+
+By respecting DIP, we promote better separation of responsibilities and a more flexible and scalable design.
+
+#### 2.5 DRY (Don't Repeat Yourself) Principle
+
+The DRY (Don’t Repeat Yourself) principle emphasizes the elimination of unnecessary code duplication in a software development project. According to this principle, each piece of knowledge or logic should have a single canonical representation within the system.
+
+Let’s explore the benefits offered by the DRY principle.
+
+- Reduction of Complexity
+
+First and foremost, it reduces code complexity by avoiding unnecessary repetitions. This makes the code more readable, clear, and easier to understand for developers. Additionally, it simplifies code maintenance, as modifications and fixes only need to be made in one place rather than in multiple parts of the code. Finally, it promotes code reuse, as common functionalities or logics can be encapsulated into functions, classes, or modules that can be used in multiple places within the system.
+
+- Elimination of Duplicate Code
+
+To avoid code duplication, there are several techniques that developers can apply. Firstly, extracting functions or methods allows grouping similar and repetitive code blocks into a reusable function. This way, the same code can be called in multiple places without needing to rewrite it.
+
+- Grouping by Functionality
+
+Next, the use of classes and inheritance can help encapsulate common functionalities and reuse them in specific subclasses. This way, common functionalities can be defined once in a parent class and inherited in child classes.
+
+- Code Reusability
+Finally, the use of libraries, modules, or frameworks can aid in reusing code that has already been written and tested by other developers, avoiding the need to reinvent the wheel.
+
+#### 2.6 KISS (Keep It Simple, Stupid) Principle
+
+The KISS (Keep It Simple, Stupid) principle emphasizes simplicity in code design and implementation. According to this principle, it’s better to maintain simple solutions rather than making them complex. Simplicity promotes understanding, maintenance, and problem-solving.
+
+Applying the KISS principle brings several advantages:
+
+- Better Code Understanding:
+It facilitates code understanding for developers as simple solutions are clearer and more intuitive.
+
+- Reduced Errors:
+It also reduces the risk of errors and bugs since simple solutions are easier to test and verify.
+
+- More Scalable Code:
+Simplicity makes code more flexible and scalable as it’s easier to make modifications or add new features to simple code rather than complex code.
+
+#### 2.7 YAGNI (You Aren't Gonna Need It) Principle
+
+The YAGNI (You Ain’t Gonna Need It) principle emphasizes not implementing features or code that are not immediately necessary. According to this principle, it’s better to focus on essential features and avoid anticipating hypothetical future needs.
+
+Applying the YAGNI principle brings several advantages. Firstly, it reduces code complexity by avoiding the addition of unnecessary features. This makes the code clearer, lighter, and easier to maintain. Additionally, it saves time and resources by avoiding the development and testing of features that might never be used. Lastly, it promotes an iterative approach to development by focusing on the immediate needs of users and allowing the addition of additional features as they become genuinely necessary.
+
+To apply the YAGNI principle, it’s important to ask the question, “Do I really need it now?” before adding a new feature or developing additional code. Carefully evaluate the importance and urgency of the functionality and avoid preemptive additions based on uncertain assumptions. Prioritize essential features and focus on the real needs of users.
+
+Let’s take a concrete example to illustrate the application of the YAGNI principle.
+
+Suppose we are developing a task management application. Instead of implementing an advanced scheduling feature with customizable reminders right from the start, we could begin with a basic functionality of task creation and tracking. By focusing on essential features, we can quickly deliver an initial version of the application, gather user feedback, and iterate by adding additional features like advanced scheduling if it proves to be a genuine user demand.
+
+By applying the YAGNI principle, we avoid over-engineering, reduce complexity, and focus on the immediate needs of users, enabling more efficient development and better utilization of resources.
+
+#### 2.8 Convention over Configuration (CoC) Principle
+
+The Convention over Configuration (CoC) principle promotes the use of predetermined conventions rather than explicit configurations. By following these conventions, developers can reduce the amount of necessary configuration and automatically benefit from functionality, simplifying the development process and improving code readability.
+
+This principle is widely applied in many tools and frameworks, and developers often benefit from it without even realizing it.
+
+For example, the structure of a Java project with directories like src/main/java, src/main/resources, and src/test/java follows the CoC principle. By placing test files in the src/test/java directory, the tests are automatically executed when running the tests. Similarly, the “Test” suffix in JUnit file names also follows the Convention over Configuration principle.
+
+Applying the CoC principle also facilitates collaboration among team members as they share a common understanding of conventions and can focus on business logic rather than configuration details.
+
+#### 2.9 Law of Demeter (LoD) Principle
+
+The Law of Demeter (LoD), also known as the “Principle of Only Talking to Your Closest Friends,” is a software design principle that promotes decoupling and reducing dependencies between classes. According to this principle, a class should only interact with its immediate collaborators and not directly access members of objects it interacts with indirectly.
+
+Applying the LoD principle brings several advantages. Firstly, it promotes decoupling between classes, making the code more modular, flexible, and easier to maintain. By limiting direct interactions between classes, changes made to one class have minimal impact on other classes, facilitating code evolution and modification.
+
+Furthermore, applying the LoD improves the robustness of the code by reducing the cascading effects of changes. When a class depends only on its immediate collaborators, it becomes less sensitive to internal changes in the objects it interacts with indirectly. This helps reduce the risks of unintended side effects and facilitates the localization and correction of errors.
+
+Let’s take a concrete example to illustrate the application of the LoD.
+
+Suppose we have a “Client” class that interacts with a “Bank” class to perform financial transactions. Instead of directly accessing members of the “Bank” class such as bank accounts, the “Client” class can use methods provided by the “Bank” class that supply the necessary information. This way, the “Client” class depends only on the interface provided by the “Bank” class and doesn’t need to know the internal details of that class.
+
+By applying the LoD principle, we reduce dependencies between classes, improve code modularity and maintainability, and minimize the cascading effects of changes. This leads to more flexible, robust, and easily evolvable code.
+
+#### 2.10 Composition over Inheritance Principle
+
+The Composition over Inheritance principle advocates for using class composition instead of inheritance to promote code reusability and avoid rigid dependencies between classes. According to this principle, it’s better to construct complex objects by combining simpler objects rather than creating a complex inheritance hierarchy.
+
+Applying the composition principle brings several advantages. Firstly, it allows greater flexibility in terms of code reuse. Instead of tightly binding a class to an inheritance hierarchy, composition enables the construction of objects by assembling reusable components. It also facilitates code modularity as components can be developed and tested independently before being combined to form more complex objects.
+
+Furthermore, applying composition reduces code complexity and avoids problems with deep and complex inheritance hierarchies. By avoiding excessive inheritance, the code becomes more readable, maintainable, and less prone to errors. Composition also allows focusing on relationships between objects rather than the details of internal implementation in a parent class.
+
+Let’s take a concrete example to illustrate the application of the composition principle. Suppose we are developing a file management system. Instead of creating a complex inheritance hierarchy with classes like “File,” “Folder,” and “Drive,” we can opt for a composition approach where each object has a list of simpler objects, such as “File” objects and “Folder” objects. This allows building flexible file structures and modular manipulation of objects, avoiding the constraints of inheritance.
+
+By applying the Composition over Inheritance principle, we promote code reusability, modularity, and object flexibility. This leads to clearer, more maintainable, and scalable code while avoiding issues related to complex inheritance hierarchies.
+
+#### 2.11 TDA (Tell, Don’t Ask) Principle
+The TDA principle suggests avoiding asking the object about its state; instead, tell it what to do based on the decision, that is, tell the object what to do.
+
+In the non-adherent “Tell, Don’t Ask” scenario, the code improperly queries the account’s balance to determine the feasibility of a withdrawal, thereby exposing the account’s internal state and violating the principles of encapsulation. The correct design encapsulates this logic within the Account class itself.
+
+When adhering to the “Tell, Don’t Ask” principle, the Account class’s withdraw method internally manages the transaction validation logic. It autonomously determines if a withdrawal is permissible without revealing its balance, maintaining the integrity and confidentiality of the account's state.
+
 
 ### 3. Real World System Design Case Studies
 
@@ -285,6 +440,8 @@ This repository compiles information from various authoritative sources in the f
 7. Kleppmann, M. (2017). Designing Data-Intensive Applications. O'Reilly Media.
 
 8. Fowler, M. (2002). Patterns of Enterprise Application Architecture. Addison-Wesley.
+
+9. https://scalastic.io/en/solid-dry-kiss/#convention-over-configuration-coc
 
 This list is not exhaustive, and we acknowledge all the researchers, authors, and organizations that have contributed to the field of system design. For specific attributions or additional references, please refer to the individual sections or open an issue.
 
