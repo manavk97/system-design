@@ -24,13 +24,6 @@ This repository aims to provide high-quality materials and resources related to 
     9. [System Problems](#49-system-problems)
     10. [Concurrency](#410-concurrency)
 
-5. [System Components](#5-system-components)
-    1. [Databases](#51-databases)
-    2. [Queues](#52-queues)
-    3. [Cache](#53-cache)
-    4. [Load Balancers](#54-load-balancers)
-    5. [File Systems](#55-file-systems)
-    6. [Data Processing](#56-data-processing)
 
 ## System Design Concepts
 
@@ -270,64 +263,6 @@ These patterns are concerned with algorithms and the assignment of responsibilit
 | Distributed Transaction | https://www.youtube.com/watch?v=4EajrPgJAk0 |
 | PostgreSQL Isolation Levels | https://www.postgresql.org/docs/current/transaction-iso.html |
 
-### 5. System Components
-
-#### 5.1. [Databases](#51-databases)
-
-| Database | Description |
-|----------|-------------|
-| MongoDB | |
-| MySQL | |
-| PostgreSQL | |
-| DynamoDB | |
-| Cassandra | |
-
-#### 5.2. [Queues](#52-queues)
-
-| Queue | Description |
-|-------|-------------|
-| Kafka | |
-| RebbitMQ | |
-| SQS | |
-
-
-#### 5.3. [Cache](#53-cache)
-
-| Cache | Description |
-|-------|-------------|
-| Redis | |
-| MemCache | |
-| CDN | |
-| Open Connect | |
-
-#### 5.4. [Load Balancers](#54-load-balancers)
-
-| Load Balancer | Description |
-|---------------|-------------|
-| L4 | |
-| L7 | |
-
-
-### Coordination Services
-
-| Coordination Service | Description |
-|-----------------------|-------------|
-| ETCD | |
-| Apache zookeeper | |
-
-#### 5.5. [File Systems](#55-file-systems)
-
-| File System | Description |
-|-------------|-------------|
-| hdfs | |
-| s3 | |
-
-#### 5.6. [Data Processing](#56-data-processing)
-
-| Data Processing | Description |
-|-----------------|-------------|
-| Map Reduce | |
-| Hadoop | |
 
 ---
 
